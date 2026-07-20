@@ -8,7 +8,7 @@ source shared.sh
 export FORCE_UNSAFE_CONFIGURE=1
 
 EXTERNAL_REL_BUILDROOT=../base_external
-MAKEOPTS="-j$(nproc) BR2_DL_DIR=${HOME}/.dl"
+MAKEOPTS="-j$(nproc) BR2_DL_DIR=${HOME}/.dl BR2_ROOTFS_OVERLAY=${EXTERNAL_REL_BUILDROOT}/rootfs_overlay"
 git submodule init
 git submodule sync
 git submodule update
